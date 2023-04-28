@@ -1,0 +1,31 @@
+{
+  "name" : "prueba",
+  "description" : "",
+  "role" : "arn:aws:iam::842103566983:role/LabRole",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "pythonshell",
+    "scriptLocation" : "s3://aws-glue-assets-842103566983-us-east-1/scripts/prueba.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-job-insights" : "false",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-842103566983-us-east-1/temporary/",
+    "--enable-glue-datacatalog" : "true"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 0,
+  "timeout" : 2880,
+  "maxCapacity" : 0.0625,
+  "glueVersion" : "1.0",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "parcial-BD02",
+    "branch" : "main",
+    "folder" : "Job1"
+  }
+}
